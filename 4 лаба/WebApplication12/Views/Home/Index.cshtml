@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebApplication12.Models.Entry>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Phonebook</title>
+    <style>
+        .floating-button {
+            text-decoration: none;
+            display: inline-block;
+            width: 140px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 25px;
+            margin: 5px 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 3px;
+            font-weight: 600;
+            color: #524f4e;
+            background: white;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+            transition: .3s;
+        }
+
+            .floating-button:hover {
+                background: #2EE59D;
+                box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+                color: white;
+                transform: translateY(-7px);
+            }</style>
+</head>
+<body>
+    <h1>Телефонная книжка</h1>
+    <table>
+        <tr>
+            <th>Фамилия</th>
+            <th style="padding: 30px">Номер телефона</th>
+            <th style="padding: 30px">Действия</th>
+        </tr>
+        @foreach (var entry in Model)
+        {
+            <tr >
+                <td>@entry.LastName</td>
+                <td style="left: 60px">@entry.PhoneNumber</td>
+                <td>
+                    <a href="@Url.Action("Update", new { id = entry.Id })" class="floating-button">Изменить</a> |
+                    <a href="@Url.Action("Delete", new { id = entry.Id })" class="floating-button">Удалить</a>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <p><a asp-action="Add" class="floating-button">Добавить</a></p>
+</body>
+</html>

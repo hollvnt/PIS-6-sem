@@ -1,0 +1,26 @@
+﻿@model WebApplication12.Models.Entry
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Добавить</title>
+</head>
+<body>
+    <h1>Добавить</h1>
+    <form asp-action="AddSave" method="post">
+        <div>
+            <label>Фамилия:</label>
+            <input type="text" asp-for="LastName" />
+        </div>
+        <div>
+            <label>Номер телефона:</label>
+            <input type="text" asp-for="PhoneNumber" />
+        </div>
+        <div>
+            <input type="submit" value="Добавить" />
+            <a asp-action="Index">Отменить</a>
+        </div>
+    </form>
+</body>
+</html>

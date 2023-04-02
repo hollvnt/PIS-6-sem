@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Task 5</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+</head>
+<body>
+    
+    <div class="container mt-5" style="width:25%">
+        <form id="form5" onsubmit="return getNumbersMultiplication()">
+            <h5>Введите два числа:</h5>
+            <input class="form-control" type="number" name="x" required /><br />
+            <input class="form-control" type="number" name="y" required /><br />
+            <button class="btn btn-secondary fs-5 mb-5" type="submit">Умножить</button>
+            <h5>Результат:</h5>
+            <input class="form-control" type="number" readonly id="inner" />
+        </form>
+    </div>
+
+    <script>
+        function getNumbersMultiplication() {
+            let formData = new FormData(document.getElementById("form5"));
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', 'http://localhost:64354/handler5', false);
+            xhr.send(formData);
+
+            let input = document.getElementById("inner");
+            if (xhr.status == 200) {
+                input.value = xhr.responseText;
+                console.log(xhr.responseText);
+            }
+            else
+                console.log("Ответ сервера: " + xhr.statusText);
+
+            return false;
+        }
+
+    </script>
+</body>
+</html>

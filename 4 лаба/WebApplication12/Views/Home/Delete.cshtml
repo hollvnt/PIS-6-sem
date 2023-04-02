@@ -1,0 +1,28 @@
+﻿@model WebApplication12.Models.Entry
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h1>Удаление</h1>
+    <form asp-action="DeleteSave" method="post">
+        <input type="hidden" asp-for="Id" />
+        <p>Вы уверены что хотите удалить?</p>
+        <div>
+            <label asp-for="LastName">Фамилия:</label>
+            <span>@Model.LastName</span>
+        </div>
+        <div>
+            <label asp-for="PhoneNumber">Номер телефона:</label>
+            <span>@Model.PhoneNumber</span>
+        </div>
+        <div>
+            <button type="submit">Удалить</button>
+            <a asp-action="Index">Отмена</a>
+        </div>
+    </form>
+</body>
+</html>

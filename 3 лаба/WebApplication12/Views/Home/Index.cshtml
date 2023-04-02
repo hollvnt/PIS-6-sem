@@ -1,0 +1,32 @@
+﻿@model IEnumerable<WebApplication12.Models.Entry>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Phonebook</title>
+</head>
+<body>
+    <h1>Телефонная книжка</h1>
+    <table>
+        <tr>
+            <th>Фамилия</th>
+            <th style="padding: 25px">Номер телефона</th>
+            <th>Действия</th>
+        </tr>
+        @foreach (var entry in Model)
+        {
+            <tr >
+                <td>@entry.LastName</td>
+                <td style="left: 25px">@entry.PhoneNumber</td>
+                <td>
+                    <a href="@Url.Action("Update", new { id = entry.Id })">Изменить</a> |
+                    <a href="@Url.Action("Delete", new { id = entry.Id })">Удалить</a>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <p><a asp-action="Add">Добавить</a></p>
+</body>
+</html>

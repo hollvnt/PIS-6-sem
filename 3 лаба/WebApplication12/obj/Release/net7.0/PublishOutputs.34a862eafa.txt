@@ -1,0 +1,9 @@
+D:\3 курс 2 сем\Программирование internet-серверов\WebApplication12\obj\Release\net7.0\PubTmp\Out\WebApplication12.exe
+D:\3 курс 2 сем\Программирование internet-серверов\WebApplication12\obj\Release\net7.0\PubTmp\Out\web.config
+D:\3 курс 2 сем\Программирование internet-серверов\WebApplication12\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
+D:\3 курс 2 сем\Программирование internet-серверов\WebApplication12\obj\Release\net7.0\PubTmp\Out\appsettings.json
+D:\3 курс 2 сем\Программирование internet-серверов\WebApplication12\obj\Release\net7.0\PubTmp\Out\WebApplication12.dll
+D:\3 курс 2 сем\Программирование internet-серверов\WebApplication12\obj\Release\net7.0\PubTmp\Out\WebApplication12.deps.json
+D:\3 курс 2 сем\Программирование internet-серверов\WebApplication12\obj\Release\net7.0\PubTmp\Out\WebApplication12.runtimeconfig.json
+D:\3 курс 2 сем\Программирование internet-серверов\WebApplication12\obj\Release\net7.0\PubTmp\Out\WebApplication12.pdb
+D:\3 курс 2 сем\Программирование internet-серверов\WebApplication12\obj\Release\net7.0\PubTmp\Out\Newtonsoft.Json.dll

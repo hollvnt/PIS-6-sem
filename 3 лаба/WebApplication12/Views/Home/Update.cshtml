@@ -1,0 +1,27 @@
+﻿@model WebApplication12.Models.Entry
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+</head>
+<body>
+    <h1>Изменить</h1>
+    <form asp-action="UpdateSave" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div>
+            <label asp-for="LastName">Фамилия:</label>
+            <input asp-for="LastName" />
+        </div>
+        <div>
+            <label asp-for="PhoneNumber">Номер телефона:</label>
+            <input asp-for="PhoneNumber" />
+        </div>
+        <div>
+            <button type="submit">Сохранить</button>
+            <a asp-action="Index">Отмена</a>
+        </div>
+    </form>
+</body>
+</html>
